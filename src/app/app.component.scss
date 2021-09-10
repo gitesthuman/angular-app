@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+$backgrColor: #141E27;
+$fontColor: #c4c4c4;
+$fontSpecialColor: #00d483;
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: $backgrColor;
+    justify-content: center;
+}
