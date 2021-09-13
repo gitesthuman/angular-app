@@ -4,16 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DescriptionComponent } from './components/description/description.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/description/home/home.component';
+import { CarsComponent } from './components/description/cars/cars.component';
+import { ContactComponent } from './components/description/contact/contact.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DescriptionComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    CarsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
