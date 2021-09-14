@@ -10,7 +10,6 @@ $fontSpecialColor: #00d483;
     width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 5fr 1fr;
     grid-template-rows: 1fr 2fr;
     font-family: 'Questrial', sans-serif;
     height: 95vh;
@@ -18,8 +17,72 @@ $fontSpecialColor: #00d483;
     margin-left: auto;
     margin-right: auto;
     color: $fontColorSection;
-
     
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: left;
+
+}
+.form-part {
+  margin-top: 20px;
+  font-size: large;
+
+}
+#heading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+
+}
+.input-id {
+  width: 100%;
+  padding-left: 2px;
+
+}
+input, textarea {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 3px;
+
+}
+.error {
+  color: red;
+
+}
+.button-part {
+  text-align: center;
+  margin-top: 10px;
+
+}
+button {
+  width: 100px;
+  font-size: large;
+
+}
+#socials {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: auto;
+  text-decoration: none;
+
+}
+.tile {
+  font-style: normal;
+  font-size: 70px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  a {
+    color: $fontColorSection;
+    text-decoration: none;
+    
+  }
+
 }
 @media screen and (max-height:560px){
 
@@ -29,7 +92,6 @@ $fontSpecialColor: #00d483;
       font-family: 'Questrial', sans-serif;
       height: 95vh;       
       color: $fontColorSection;
-  
       
   }
 }
