@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/description/home/home.component';
 import { CarsComponent } from './components/description/cars/cars.component';
 import { ContactComponent } from './components/description/contact/contact.component';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { ContactComponent } from './components/description/contact/contact.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
