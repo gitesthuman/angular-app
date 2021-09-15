@@ -3,24 +3,30 @@ $backgrColor: #141e27;
 $fontColorSection: #ffffff;
 $fontSpecialColor: #00d483;
 
-.container {
-  box-sizing: border-box;
-  // background-color: $backgrColor;
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-content: stretch;
   background: linear-gradient(
       rgba(20, 30, 39, 0.9) 100%,
       rgba(20, 30, 39, 0.9) 100%
     ),
     url(https://blogs.esa.int/space19plus/files/2019/03/nebula.jpg);
+}
+.container {
+  box-sizing: border-box;
   width: 100%;
   position: relative;
   display: grid;
   grid-template-rows: 1fr 2fr;
   font-family: "Questrial", sans-serif;
-  height: 95vh;
+  height: 80%;
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
   color: $fontColorSection;
+  border: 1px solid red;
 }
 form {
   margin-left: auto;
@@ -58,36 +64,32 @@ button {
   width: 100px;
   font-size: large;
 }
-#socials {
+.socials-container {
+  border: 1px solid red;
   display: flex;
+  position: relative;
+  width: 100%;
+  height: 20%;
 }
-.tile {
-  font-style: normal;
-  font-size: 70px;
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  text-align: center;
-  a {
-    color: $fontColorSection;
-    text-decoration: none;
-  }
+.socials {
+  border: 1px solid red;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 2fr 2fr 2fr 3fr;
+  grid-template-rows: 1fr;
+  grid-gap: 50px;
+  // background-color: $fontSpecialColor;
+  justify-items: center;
 }
-@media screen and (max-height: 560px) {
-  .container {
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    font-family: "Questrial", sans-serif;
-    height: 95vh;
-    color: $fontColorSection;
-  }
+#github {
+  grid-column: 2/3;
+  grid-row: 1/1;
 }
-@media screen and (max-width: 800px) {
-  .container {
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    font-family: "Questrial", sans-serif;
-    height: 95vh;
-    color: $fontColorSection;
-  }
+#facebook {
+  grid-column: 3/4;
+  grid-row: 1/1;
+}
+#instagram {
+  grid-column: 4/5;
+  grid-row: 1/1;
 }

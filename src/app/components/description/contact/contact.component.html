@@ -1,59 +1,62 @@
-<div class="container">
-  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-    <div id="heading">Contact us!</div>
+<div class="content">
+  <div class="container">
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <div id="heading">Contact us!</div>
 
-    <div class="form-part">
-      <label class="input-id">Name and surname</label>
-      <input
-        type="text"
-        name="name"
-        [(ngModel)]="name"
-        #nameInput="ngModel"
-        required
-      />
+      <div class="form-part">
+        <label class="input-id">Name and surname</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          #nameInput="ngModel"
+          required
+        />
 
-      <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
-        Your name and surname are required.
+        <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
+          Your name and surname are required.
+        </div>
       </div>
-    </div>
 
-    <div class="form-part">
-      <label class="input-id">Email adress</label>
-      <input
-        type="email"
-        name="email"
-        [(ngModel)]="email"
-        #emailInput="ngModel"
-        required
-      />
+      <div class="form-part">
+        <label class="input-id">Email adress</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+          required
+        />
 
-      <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
-        Your email is required and needs to be valid.
+        <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
+          Your email is required and needs to be valid.
+        </div>
       </div>
+
+      <div class="form-part">
+        <label class="input-id">Message</label>
+        <textarea name="message" [(ngModel)]="message" rows="8" cols="40">
+        </textarea>
+      </div>
+
+      <div class="button-part">
+        <button type="submit" [disabled]="contactForm.invalid">Send</button>
+      </div>
+    </form>
+  </div>
+  <div class="socials-container">
+    <div class="socials">
+      <a href="https:/github.com/" target="_blank" id="github">
+        <img src="assets/icons/github.png" alt="github" />
+      </a>
+
+      <a href="https://facebook.com/" target="_blank" id="facebook">
+        <img src="assets/icons/facebook.png" alt="facebook" />
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank" id="instagram">
+        <img src="assets/icons/instagram.png" alt="instagram" />
+      </a>
     </div>
-
-    <div class="form-part">
-      <label class="input-id">Message</label>
-      <textarea name="message" [(ngModel)]="message" rows="8" cols="40">
-      </textarea>
-    </div>
-
-    <div class="button-part">
-      <button type="submit" [disabled]="contactForm.invalid">Send</button>
-    </div>
-  </form>
-
-  <div id="socials">
-    <a href="https:/github.com/" target="_blank">
-      <img src="assets/icons/github.png" />
-    </a>
-
-    <a href="https://facebook.com/" target="_blank">
-      <img src="assets/icons/facebook.png" />
-    </a>
-
-    <a href="https://www.instagram.com/" target="_blank">
-      <img src="assets/icons/instagram.png" />
-    </a>
   </div>
 </div>
