@@ -81,24 +81,12 @@ button {
   // background-color: $fontSpecialColor;
   justify-items: center;
 }
-#github {
-  grid-column: 2/3;
-  grid-row: 1/1;
+
+.socials i {
+  color: $fontColorSection;
 }
-#facebook {
-  grid-column: 3/4;
-  grid-row: 1/1;
-}
-#instagram {
-  grid-column: 4/5;
-  grid-row: 1/1;
-}
-.socials img {
-  background-color: white;
-  opacity: 0.4;
-}
-.socials img:hover {
-  opacity: 0.8;
-  background-color: #00d483;
-  transition: all 0.2s ease;
+.socials i:hover {
+  opacity: 0.6;
+  color: #00d483;
+  transition: all 0.1s ease;
 }
