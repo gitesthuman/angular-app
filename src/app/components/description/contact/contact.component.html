@@ -1,53 +1,60 @@
-<div class="container">
-  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+<div class="content">
+  <div class="container">
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <div id="heading">Contact us!</div>
 
-    <div id="heading">Contact us!</div>
+      <div class="form-part">
+        <label class="input-id">Name and surname</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          #nameInput="ngModel"
+          required
+        />
 
-    <div class="form-part">
-      <label class="input-id">Name and surname</label>
-      <input type="text" name="name" [(ngModel)]="name" #nameInput="ngModel" required>
-
-      <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
-        Your name and surname are required.
+        <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
+          Your name and surname are required.
+        </div>
       </div>
-    </div>
 
-    <div class="form-part">
-      <label class="input-id">Email adress</label>
-      <input type="email" name="email" [(ngModel)]="email" #emailInput="ngModel" required>
+      <div class="form-part">
+        <label class="input-id">Email adress</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+          required
+        />
 
-      <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
-        Your email is required and needs to be valid.
+        <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
+          Your email is required and needs to be valid.
+        </div>
       </div>
-    </div>
 
-    <div class="form-part">
-      <label class="input-id">Message</label>
-      <textarea name="message" [(ngModel)]="message" rows="8" cols="40">
-      </textarea>
-    </div>
+      <div class="form-part">
+        <label class="input-id">Message</label>
+        <textarea name="message" [(ngModel)]="message" rows="8" cols="40">
+        </textarea>
+      </div>
 
-    <div class="button-part">
-      <button type="submit" [disabled]="contactForm.invalid">Send</button>
-    </div>
-
-  </form>
-
-  <div id="socials">
-    <div class="tile">
-      <a href="https://twitter.com/" target="_blank">tt</a>
-    </div>
-
-    <div class="tile">
-      <a href="https://facebook.com/" target="_blank">fb</a>
-    </div>
-
-    <div class="tile">
-      <a href="https://www.instagram.com/" target="_blank">ig</a>
-    </div>
-
-    <div class="tile">
-      <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+      <div class="button-part">
+        <button type="submit" [disabled]="contactForm.invalid">Send</button>
+      </div>
+    </form>
+  </div>
+  <div class="socials-container">
+    <div class="socials">
+      <a href="https:/facebook.com" target="_blank" id="fb">
+        <i class="fab fa-facebook fa-4x"></i>
+      </a>
+      <a href="https://github.com/baldmaan" target="_blank" id="git">
+        <i class="fab fa-github fa-4x"></i>
+      </a>
+      <a href="https://www.instagram.com " target="_blank" id="ig">
+        <i class="fab fa-instagram fa-4x"></i>
+      </a>
     </div>
   </div>
 </div>
