@@ -21,6 +21,7 @@ $fontSpecialColor: #00d483;
   position: relative;
   display: grid;
   grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
   font-family: "Questrial", sans-serif;
   height: 80%;
   margin-top: 5em;
@@ -40,6 +41,7 @@ form {
 .form-part {
   margin-top: 20px;
   font-size: large;
+  display: block;
 }
 
 #heading {
@@ -49,19 +51,31 @@ form {
 }
 
 .input-id {
-  width: 100%;
+  width: 95%;
   padding-left: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 input,
 textarea {
-  width: 100%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 4px;
   margin-bottom: 3px;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
 }
 
 .error {
-  color: red;
+  color: rgb(236, 65, 65);
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-part {
@@ -71,7 +85,32 @@ textarea {
 
 button {
   width: 100px;
-  font-size: large;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #00d483;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px rgb(117, 117, 117);
+  color: #373838;
+
+}
+
+button:hover{
+  background-color: #00ff9d;
+}
+
+button:active {
+  box-shadow: 0 3px rgb(66, 66, 66);
+  transform: translateY(4px);
+}
+
+button[disabled] {
+  background-color: #005534;
+  cursor: not-allowed;
+  color: #373838c0;
+  box-shadow: 0 5px rgb(34, 34, 34);
+
 }
 
 .socials-container {
@@ -81,6 +120,7 @@ button {
   width: 100%;
   height: 20%;
   margin-bottom: 30%;
+  
 }
 
 .socials {
@@ -114,4 +154,22 @@ button {
   opacity: 0.6;
   color: #00d483;
   transition: all 0.1s ease;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-top: 6vh;
+  }
+
+  .form-part {
+    font-size: small;
+  }
+
+  input, textarea {
+    font-size: small;
+  }
+
 }
