@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+$backgrColor: #141e27;
+$fontColorSection: #ffffff;
+$fontSpecialColor: #00d483;
+
+.car {
+  //   background-color: rgb(8, 8, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90%;
+}
+img {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //   border: 1px solid red;
+  background-color: $fontSpecialColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.overlay p {
+  font-size: 2rem;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.overlay:hover {
+  opacity: 0.87;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  .overlay p {
+    font-size: 1.5rem;
+    text-align: center;
+    transition: opacity 0.2s ease;
+  }
+}
+
+@media screen and (max-width: 500px) { }

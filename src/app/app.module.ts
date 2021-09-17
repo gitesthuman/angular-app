@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CarComponent } from './components/car/car.component';
 
 
 
@@ -19,7 +20,8 @@ import { ContactComponent } from './components/contact/contact.component';
     FooterComponent,
     HomeComponent,
     CarsComponent,
-    ContactComponent
+    ContactComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
