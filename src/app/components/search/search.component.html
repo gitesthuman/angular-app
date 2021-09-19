@@ -4,26 +4,32 @@
 
     <div class="form-part">
       <label class="input-id">Year of production</label>
-      <input type="text" name="year" [(ngModel)]="year" required />
+      <input type="text" name="year" [(ngModel)]="year" />
     </div>
 
     <div class="form-part">
       <label class="input-id">Make</label>
-      <input type="text" name="make" [(ngModel)]="make" required />
+      <input type="text" name="make" [(ngModel)]="make" />
     </div>
 
     <div class="form-part">
       <label class="input-id">Model</label>
-      <input type="text" name="model" [(ngModel)]="model" required />
+      <input type="text" name="model" [(ngModel)]="model" />
     </div>
 
     <div class="form-part">
       <label class="input-id">Body style</label>
-      <input type="text" name="type" [(ngModel)]="type" required />
+      <input type="text" name="type" [(ngModel)]="type" />
     </div>
 
     <div class="button-part">
       <button type="submit" [disabled]="contactForm.invalid">Search</button>
     </div>
   </form>
+
+  <div class="products" *ngFor="let product of products">
+    <div class="product">[{{ product.year }}, {{ product.make }}, {{ product.model }}, {{ product.type }}]</div>
+  </div>
+  <div class="none" *ngIf="products.length == 0">No cars found...</div>
+
 </div>
