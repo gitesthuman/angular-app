@@ -28,7 +28,9 @@
   </form>
 
   <div class="products" *ngFor="let product of products">
-    <div class="product">[{{ product.year }}, {{ product.make }}, {{ product.model }}, {{ product.type }}]</div>
+    <app-product year="{{ product.year }}" make="{{ product.make }}" model="{{ product.model }}"
+      type="{{ product.type }}">
+    </app-product>
   </div>
   <div class="none" *ngIf="products.length == 0">No cars found...</div>
 

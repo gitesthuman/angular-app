@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { SearchComponent } from './components/search/search.component';
 import { CarComponent } from './components/car/car.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 
@@ -21,7 +22,8 @@ import { CarComponent } from './components/car/car.component';
     HomeComponent,
     CarsComponent,
     SearchComponent,
-    CarComponent
+    CarComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
