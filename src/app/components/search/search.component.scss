@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+$backgrColor: #141e27;
+$fontColorSection: #ffffff;
+$fontSpecialColor: #00d483;
+
+.container {
+  background: linear-gradient(
+      rgba(20, 30, 39, 0.9) 100%,
+      rgba(20, 30, 39, 0.9) 100%
+    ),
+    url(https://blogs.esa.int/space19plus/files/2019/03/nebula.jpg);
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Questrial", sans-serif;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  color: $fontColorSection;
+  padding-top: 50px;
+  min-height: 700px;
+  // border: 1px solid red;
+}
+
+form {
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: left;
+}
+
+.form-part {
+  margin-top: 20px;
+  font-size: large;
+  display: block;
+}
+
+#heading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.input-id {
+  width: 95%;
+  padding-left: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+input,
+textarea {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+}
+
+.error {
+  color: rgb(236, 65, 65);
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-part {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  width: 100px;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #00d483;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px rgb(117, 117, 117);
+  color: #373838;
+
+}
+
+button:hover{
+  background-color: #00ff9d;
+}
+
+button:active {
+  box-shadow: 0 3px rgb(66, 66, 66);
+  transform: translateY(4px);
+}
+
+button[disabled] {
+  background-color: #005534;
+  cursor: not-allowed;
+  color: #373838c0;
+  box-shadow: 0 5px rgb(34, 34, 34);
+
+}
+
+.products {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product {
+  height: 48px;
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  float: left;
+  text-align: center;
+  background-color: rgb(20, 145, 107);
+}
+
+.none {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-top: 6vh;
+  }
+
+  .form-part {
+    font-size: small;
+  }
+
+  input, textarea {
+    font-size: small;
+  }
+
+}
